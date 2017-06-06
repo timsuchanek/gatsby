@@ -1,0 +1,56 @@
+{
+  "name": "gatsby-plugin-typography",
+  "version": "",
+  "description": "Stub description for gatsby-plugin-typography",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir . --ignore __tests__",
+    "watch": "babel -w src --out-dir . --ignore __tests__"
+  },
+  "keywords": [
+    "gatsby"
+  ],
+  "author": "Kyle Mathews &lt;mathews.kyle@gmail.com&gt;",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1"
+  },
+  "dependencies": {
+    "react-typography": "^0.15.10",
+    "typography": "^0.15.10",
+    "typography-plugin-code": "^0.15.10",
+    "typography-theme-alton": "^0.15.10",
+    "typography-theme-bootstrap": "^0.15.10",
+    "typography-theme-de-young": "^0.15.10",
+    "typography-theme-doelger": "^0.15.10",
+    "typography-theme-elk-glen": "^0.15.10",
+    "typography-theme-fairy-gates": "^0.15.10",
+    "typography-theme-funston": "^0.15.10",
+    "typography-theme-github": "^0.15.10",
+    "typography-theme-grand-view": "^0.15.10",
+    "typography-theme-irving": "^0.15.10",
+    "typography-theme-judah": "^0.15.10",
+    "typography-theme-kirkham": "^0.15.10",
+    "typography-theme-lawton": "^0.15.10",
+    "typography-theme-lincoln": "^0.15.10",
+    "typography-theme-moraga": "^0.15.10",
+    "typography-theme-noriega": "^0.15.10",
+    "typography-theme-ocean-beach": "^0.15.10",
+    "typography-theme-parnassus": "^0.15.10",
+    "typography-theme-st-annes": "^0.15.10",
+    "typography-theme-stern-grove": "^0.15.10",
+    "typography-theme-stow-lake": "^0.15.10",
+    "typography-theme-sutro": "^0.15.10",
+    "typography-theme-twin-peaks": "^0.15.10",
+    "typography-theme-us-web-design-standards": "^0.15.10",
+    "typography-theme-wikipedia": "^0.15.11",
+    "typography-theme-wordpress-2010": "^0.15.10",
+    "typography-theme-wordpress-2011": "^0.15.10",
+    "typography-theme-wordpress-2012": "^0.15.10",
+    "typography-theme-wordpress-2013": "^0.15.10",
+    "typography-theme-wordpress-2014": "^0.15.10",
+    "typography-theme-wordpress-2015": "^0.15.10",
+    "typography-theme-wordpress-2016": "^0.15.10",
+    "typography-theme-wordpress-kubrick": "^0.15.10"
+  }
+}
