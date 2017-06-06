@@ -3,6 +3,8 @@ const moment = require(`moment`)
 
 module.exports = (state = { active: [], done: [] }, action) => {
   switch (action.type) {
+    case `DELETE_CACHE`:
+      return { active: [], done: [] }
     case `CREATE_JOB`:
     case `SET_JOB`:
       if (!action.payload.id) {

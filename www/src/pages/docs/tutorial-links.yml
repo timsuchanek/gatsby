@@ -9,4 +9,7 @@
     ">> Linking between pages": /tutorial/part-one/#linking-between-pages
     ">> Interactive page": /tutorial/part-one/#interactive-page
     ">> Deploying Gatsby.js websites on the web": /tutorial/part-one/#deploying-gatsbyjs-websites-on-the-web
+- title: Part Two
+  links:
+    Part two: /tutorial/part-two/
 

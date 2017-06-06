@@ -7,12 +7,20 @@ const { boundActionCreators } = require(`../../redux/actions`)
 
 const { store } = require(`../../redux`)
 
+const makeJobId = page => `runPathQuery: ${page.path}`
 // Run query for a page
 module.exports = async (page, component) => {
-  const { schema, program } = store.getState()
+  const { schema, program, jobs } = store.getState()
 
   const graphql = (query, context) =>
     graphqlFunction(schema, query, context, context, context)
+
+  const jobId = makeJobId(page)
+
+  // If this page's query is already being processed, return.
+  if (jobs.active.some(j => j.id === jobId)) {
+    return
+  }
 
   // Run query
   let result
@@ -21,16 +29,12 @@ module.exports = async (page, component) => {
   if (!component.query || component.query === ``) {
     result = {}
   } else {
-    boundActionCreators.createJob(
-      { id: `runPathQuery: ${page.path}` },
-      { name: `query-runner.js` }
-    )
+    console.log(`creating job runPathQuery ${page.path}`)
+    boundActionCreators.createJob({ id: jobId }, { name: `query-runner.js` })
     result = await graphql(component.query, { ...page, ...page.context })
 
-    boundActionCreators.endJob(
-      { id: `runPathQuery: ${page.path}` },
-      { name: `query-runner.js` }
-    )
+    console.log(`ending job runPathQuery ${page.path}`)
+    boundActionCreators.endJob({ id: jobId }, { name: `query-runner.js` })
   }
 
   // If there's a graphql errort then log the error. If we're building, also
