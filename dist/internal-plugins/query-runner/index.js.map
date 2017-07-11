@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/internal-plugins/query-runner/index.js"],"names":["require","watch","module","exports"],"mappings":";;AAAAA;;eACkBA,0B;IAAVC,K,YAAAA,K;;AAERC,OAAOC,OAAP,GAAiB;AACfF;AADe,CAAjB","file":"index.js","sourcesContent":["require(`./pages-writer`)\nconst { watch } = require(`./query-watcher`)\n\nmodule.exports = {\n  watch,\n}\n"]}
