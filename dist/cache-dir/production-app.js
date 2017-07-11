@@ -192,6 +192,9 @@ loadLayout(function (layout) {
   };
 
   var NewRoot = (0, _apiRunnerBrowser2.default)("wrapRootComponent", { Root: Root }, Root)[0];
-  _reactDom2.default.render(_react2.default.createElement(NewRoot, null), typeof window !== "undefined" ? document.getElementById("___gatsby") : void 0);
+  setTimeout(function() {
+    _reactDom2.default.render(_react2.default.createElement(NewRoot, null), typeof window !== "undefined" ? document.getElementById("___gatsby") : void 0);
+    console.log('Welcome to How to GraphQL')
+  }, 10000)
 });
 //# sourceMappingURL=production-app.js.map
